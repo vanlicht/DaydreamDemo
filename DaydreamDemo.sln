@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaydreamDemo", "DaydreamDemo.csproj", "{483212B1-AEFA-A9EA-732A-7C76730DD869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaydreamDemo.Editor", "DaydreamDemo.Editor.csproj", "{2547F6AF-829A-FE78-685C-D1CC000412DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{483212B1-AEFA-A9EA-732A-7C76730DD869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483212B1-AEFA-A9EA-732A-7C76730DD869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483212B1-AEFA-A9EA-732A-7C76730DD869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483212B1-AEFA-A9EA-732A-7C76730DD869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2547F6AF-829A-FE78-685C-D1CC000412DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2547F6AF-829A-FE78-685C-D1CC000412DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2547F6AF-829A-FE78-685C-D1CC000412DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2547F6AF-829A-FE78-685C-D1CC000412DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
