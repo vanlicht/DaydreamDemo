@@ -32,16 +32,17 @@ public class GvrLaserPointer : GvrBasePointer
     //T: rectile position
     private Vector3 reticlePos;
 
-  /// Small offset to prevent z-fighting of the reticle (meters).
-  private const float Z_OFFSET_EPSILON = 0.1f;
+    /// Small offset to prevent z-fighting of the reticle (meters).
+    private const float Z_OFFSET_EPSILON = 0.1f;
 
-  /// Size of the reticle in meters as seen from 1 meter.
-  private const float RETICLE_SIZE = 0.01f;
+    /// Size of the reticle in meters as seen from 1 meter.
+    private const float RETICLE_SIZE = 0.01f;
 
-  private LineRenderer lineRenderer;
-  private bool isPointerIntersecting;
-  private Vector3 pointerIntersection;
-  private Ray pointerIntersectionRay;
+    private LineRenderer lineRenderer;
+    private bool isPointerIntersecting;
+    private Vector3 pointerIntersection;
+    private Ray pointerIntersectionRay;
+    private RaycastHit hitInfo;
 
 
   /// Color of the laser pointer including alpha transparency
@@ -68,7 +69,14 @@ public class GvrLaserPointer : GvrBasePointer
         Vector3 difference = pointerIntersection - pointerIntersectionRay.origin;
         Vector3 clampedDifference = Vector3.ClampMagnitude(difference, maxReticleDistance);
         Vector3 clampedPosition = pointerIntersectionRay.origin + clampedDifference;
-        reticle.transform.position = clampedPosition;  
+        reticle.transform.position = clampedPosition;
+                Debug.Log("debug 001");
+                if(Physics.Raycast(pointerIntersectionRay, out hitInfo))
+                {
+                    Debug.Log(hitInfo.point);
+                }
+                
+
         
       } else {
         reticle.transform.localPosition = new Vector3(0, 0, maxReticleDistance);
@@ -147,7 +155,7 @@ public class GvrLaserPointer : GvrBasePointer
     public void playerTeleport()
     {
         reticlePos = pointerIntersection;
-        player.transform.position = new Vector3(reticlePos.x, 1.6f, reticlePos.z); 
+        player.transform.position = new Vector3(reticlePos.x, 1.6f, reticlePos.z);
     }
 }
 

@@ -154,6 +154,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\Pose3D.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\UI\GvrLaserPointer.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\UI\GvrReticlePointer.cs" />
+    <Compile Include="Assets\GoogleVR\Scripts\UI\tLaserPointer.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrFPS.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
